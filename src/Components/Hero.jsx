@@ -22,11 +22,11 @@ export default function Hero() {
             */}
             <div className="max-w-7xl mx-auto w-full px-8 md:px-16 z-10 mt-24 md:mt-0 relative">
                 <div className="flex flex-col space-y-5 font-sans w-full md:w-1/2 md:pr-10">
-                    <h2 className="text-[#FDC435] font-bold uppercase tracking-widest text-sm md:text-base">
+                    <h2 className="text-[#FDC435] font-title font-bold uppercase tracking-widest text-sm md:text-base">
                         Chef de projet
                     </h2>
 
-                    <h1 className="text-5xl md:text-7xl font-black text-[#25282B] leading-tight">
+                    <h1 className="text-5xl md:text-7xl font-title font-black text-[#25282B] leading-tight">
                         Hello, my name is <br />
                         Julien Vouilloz
                     </h1>

@@ -16,6 +16,7 @@ export default {
             fontFamily: {
                 serif: ['"Playfair Display"', 'serif'],
                 sans: ['Nunito', 'sans-serif'],
+                title: ['Montserrat', 'sans-serif'],
             },
             maxWidth: {
                 container: '1140px',
