@@ -11,7 +11,7 @@ export default function Header() {
                         <a href="#projects" className="hover:text-brand-yellow transition-colors">Projects</a>
                     </li>
                     <li>
-                        <a href="#contacts" className="hover:text-brand-yellow transition-colors">Contacts</a>
+                        <a href="mailto:julien.vouilloz@efrei.net" className="hover:text-brand-yellow transition-colors">Contacts</a>
                     </li>
                 </ul>
             </nav>

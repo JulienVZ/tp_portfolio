@@ -7,24 +7,24 @@ export default function Projects() {
     const projectList = [
         {
             id: 1,
-            title: "Project Name",
-            description: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.",
-            img: imgProject1, // Remplacer par imgProject1
-            reverse: false // Image à droite
+            title: "Pokédex",
+            description: "I created this simple project by using a pokemon API, I used React for the frontend and Node.js for the backend. I was responsible for the entire development process, from designing the user interface to implementing the API integration and ensuring a smooth user experience.",
+            img: imgProject1,
+            reverse: false
         },
         {
             id: 2,
-            title: "Project Name",
-            description: "What was your role, your deliverables, if the project was personal, freelancing.",
-            img: imgProject2, // Remplacer par imgProject2
-            reverse: true // Image à gauche
+            title: "Trading Bot",
+            description: "This project is a trading bot that I developed using Python. The bot is designed to analyze market data and execute trades based on predefined strategies. I implemented various algorithms for technical analysis and risk management, allowing the bot to make informed trading decisions in real-time.",
+            img: imgProject2,
+            reverse: true
         },
         {
             id: 3,
-            title: "Project Name",
-            description: "You can also add in this description the type of the project, if it was for web, mobile, electron.",
-            img: imgProject3, // Remplacer par imgProject3
-            reverse: false // Image à droite
+            title: "Maison SALIN",
+            description: "For this project, I developed a website for a wine trading company called Maison SALIN. The website was built using basic front end (HTML, CSS, JavaScript) and linked it with the back end with FastAPI. I was responsible for designing the user interface, implementing the property listing features, and integrating a contact form for potential clients to reach out to the agency.",
+            img: imgProject3,
+            reverse: false
         }
     ];
 
@@ -32,26 +32,21 @@ export default function Projects() {
         <section id="projects" className="w-full py-20 bg-white">
             <div className="max-w-6xl mx-auto px-6 md:px-12">
 
-                {/* En-tête de la section */}
                 <div className="flex flex-col items-center mb-16 relative">
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-dark mb-3">
                         Projects
                     </h2>
-                    {/* Le petit trait jaune sous le titre */}
                     <div className="w-20 h-1 bg-primary rounded-full"></div>
                 </div>
 
-                {/* Conteneur de la liste des projets */}
                 <div className="flex flex-col space-y-16">
 
-                    {/* Boucle sur le tableau pour générer les cartes */}
                     {projectList.map((project) => (
                         <div
                             key={project.id}
                             className={`flex flex-col ${project.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} bg-white rounded-card shadow-card overflow-hidden`}
                         >
 
-                            {/* Moitié Texte */}
                             <div className="w-full md:w-1/2 p-8 md:p-14 lg:p-20 flex flex-col justify-center items-start">
                                 <h3 className="text-3xl font-serif font-bold text-dark mb-4">
                                     {project.title}
@@ -64,7 +59,6 @@ export default function Projects() {
                                 </button>
                             </div>
 
-                            {/* Moitié Image */}
                             <div className="w-full md:w-1/2 h-64 md:h-auto min-h-[300px] md:min-h-[450px]">
                                 <img
                                     src={project.img}

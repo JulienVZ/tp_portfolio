@@ -5,9 +5,6 @@ export default function Hero() {
     return (
         <section id="hero" className="relative w-full min-h-screen flex items-center overflow-x-hidden bg-white">
 
-            {/* L'image combinée est sortie du flux (absolute) et fixée en haut à droite.
-              object-right-top garantit que l'image colle toujours au plafond et au bord droit de l'écran.
-            */}
             <div className="absolute top-0 right-0 w-full md:w-1/2 lg:w-[55%] h-full flex justify-end items-start z-0 pointer-events-none">
                 <img
                     src={ImageSite}
@@ -16,14 +13,10 @@ export default function Hero() {
                 />
             </div>
 
-            {/* Le conteneur du texte reste centré dans sa zone invisible (max-w-7xl).
-              On donne à ce bloc une largeur de la moitié de l'écran (md:w-1/2)
-              pour qu'il ne passe pas derrière ou par-dessus l'image.
-            */}
             <div className="max-w-7xl mx-auto w-full px-8 md:px-16 z-10 mt-24 md:mt-0 relative">
                 <div className="flex flex-col space-y-5 font-sans w-full md:w-1/2 md:pr-10">
-                    <h2 className="text-[#FDC435] font-title font-bold uppercase tracking-widest text-sm md:text-base">
-                        Chef de projet
+                    <h2 className="text-[#fefa36] font-title font-bold uppercase tracking-widest text-sm md:text-base">
+                        Chef de projet data et IA
                     </h2>
 
                     <h1 className="text-5xl md:text-7xl font-title font-black text-[#25282B] leading-tight">
@@ -36,13 +29,21 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-4">
-                        <button className="bg-[#FDC435] text-[#25282B] font-bold px-8 py-2 rounded-lg shadow-[0_4px_10px_rgba(253,196,53,0.4)] hover:bg-yellow-500 transition-colors">
+                        <a
+                            href="#projects"
+                            className="bg-[#fefa36] text-[#25282B] font-bold px-8 py-2 rounded-lg shadow-[0_4px_10px_rgba(253,196,53,0.4)] hover:bg-yellow-300 transition-colors text-center"
+                        >
                             Projects
-                        </button>
+                        </a>
 
-                        <button className="border-2 border-[#25282B] text-[#25282B] bg-transparent font-bold px-8 py-2 rounded-lg hover:bg-[#25282B] hover:text-white transition-colors">
+                        <a
+                            href="https://www.linkedin.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="border-2 border-[#25282B] text-[#25282B] bg-transparent font-bold px-8 py-2 rounded-lg hover:bg-[#25282B] hover:text-white transition-colors"
+                        >
                             LinkedIn
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
