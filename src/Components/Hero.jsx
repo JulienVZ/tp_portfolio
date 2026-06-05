@@ -37,7 +37,7 @@ export default function Hero() {
                         </a>
 
                         <a
-                            href="https://www.linkedin.com"
+                            href="https://www.linkedin.com/in/julien-vouilloz-0428b935b/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="border-2 border-[#25282B] text-[#25282B] bg-transparent font-bold px-8 py-2 rounded-lg hover:bg-[#25282B] hover:text-white transition-colors"
