@@ -1,11 +1,12 @@
-import React from 'react';
+import 'react';
+import ImageSite from "../assets/Vector.png";
 
 export default function Footer() {
     return (
     <footer className="w-full py-16 flex flex-col items-center justify-center bg-white">
 
         {/* Conteneur des icônes */}
-        <div className="flex space-x-8 mb-8">
+        <div className="flex space-x-6 mb-6">
 
             {/* Icône Instagram */}
             <a
@@ -45,9 +46,16 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className="text-[#828282] text-sm md:text-base font-sans">
+        <p className="text-[#828282] text-sm md:text-base font-sans mb-30">
             Julien VOUILLOZ 2026
         </p>
+
+        <img
+            src={ImageSite}
+            alt=""
+            aria-hidden="true"
+            className="absolute bottom w-full h-auto object-contain"
+        />
 
     </footer>
 );

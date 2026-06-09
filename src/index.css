@@ -1,6 +1,16 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-[#25282B] antialiased bg-white;
+  }
+}
+
 @layer base {
   body {
     @apply font-sans text-[#25282B] antialiased bg-white;

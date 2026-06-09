@@ -1,21 +1,30 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Header from './Components/Header';
-import Hero from './Components/Hero';
-import Projects from './Components/Projects';
 import Footer from './Components/Footer';
+import Home from './Components/Home';
+import About from './Components/About';
 
 function App() {
-  return (
-      <div className="min-h-screen bg-white text-dark font-sans overflow-x-hidden">
-        <Header />
+    return (
+        <Router>
+            <div className="min-h-screen flex flex-col bg-white text-[#25282B] font-sans overflow-x-hidden">
 
-        <main>
-            <Hero />
-            <Projects />
-        </main>
-          <Footer />
+                <Header />
 
-      </div>
-  );
+                <main className="flex-grow">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+
+                        <Route path="/about" element={<About />} />
+                    </Routes>
+                </main>
+
+                <Footer />
+
+            </div>
+        </Router>
+    );
 }
 
 export default App;

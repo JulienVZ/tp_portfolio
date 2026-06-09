@@ -1,4 +1,4 @@
-import React from 'react';
+import 'react';
 import ImageSite from '../assets/ImageSite.png';
 
 export default function Hero() {
@@ -16,7 +16,7 @@ export default function Hero() {
             <div className="max-w-7xl mx-auto w-full px-8 md:px-16 z-10 mt-24 md:mt-0 relative">
                 <div className="flex flex-col space-y-5 font-sans w-full md:w-1/2 md:pr-10">
                     <h2 className="text-[#fefa36] font-title font-bold uppercase tracking-widest text-sm md:text-base">
-                        Chef de projet data et IA
+                        Data and AI Project Manager
                     </h2>
 
                     <h1 className="text-5xl md:text-7xl font-title font-black text-[#25282B] leading-tight">
