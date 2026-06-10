@@ -3,11 +3,11 @@ import Hero from './Hero';
 import Projects from './Projects';
 import Contact from './Contact';
 
-export default function Home() {
+export default function Home({ portfolioData }) {
     return (
         <>
-            <Hero />
-            <Projects />
+            <Hero heroData={portfolioData.hero} />
+            <Projects projectsData={portfolioData.projects} />
             <Contact />
         </>
     );

@@ -1,7 +1,7 @@
 import 'react';
 import ImageSite from '../assets/ImageSite.png';
 
-export default function Hero() {
+export default function Hero({ heroData }) {
     return (
         <section id="hero" className="relative w-full min-h-screen flex items-center overflow-x-hidden bg-white">
 
@@ -16,16 +16,16 @@ export default function Hero() {
             <div className="max-w-7xl mx-auto w-full px-8 md:px-16 z-10 mt-24 md:mt-0 relative">
                 <div className="flex flex-col space-y-5 font-sans w-full md:w-1/2 md:pr-10">
                     <h2 className="text-[#fefa36] font-title font-bold uppercase tracking-widest text-sm md:text-base">
-                        Data and AI Project Manager
+                        {heroData.subtitle}
                     </h2>
 
                     <h1 className="text-5xl md:text-7xl font-title font-black text-[#25282B] leading-tight">
-                        Hello, my name is <br />
-                        Julien Vouilloz
+                        Hello, my name&nbsp;is <br />
+                        {heroData.title.split('Hello, my name is').join('')}
                     </h1>
 
                     <p className="text-[#828282] text-lg max-w-md leading-relaxed">
-                        Seven minutes, seven minutes is all i can spend to spare with you.
+                        {heroData.description}
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-4">

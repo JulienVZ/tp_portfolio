@@ -3,7 +3,7 @@ import imgProject1 from '../assets/imgProject1.jpg';
 import imgProject2 from '../assets/imgProject2.jpg';
 import imgProject3 from '../assets/imgProject3.png';
 
-export default function Projects() {
+export default function Projects({ projectsData }) {
     const projectList = [
         {
             id: 1,
@@ -41,20 +41,20 @@ export default function Projects() {
 
                 <div className="flex flex-col space-y-16">
 
-                    {projectList.map((project) => (
+                    {projectsData?.map((project) => (
                         <div
                             key={project.id}
-                            className={`flex flex-col ${project.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} bg-white rounded-card shadow-card overflow-hidden`}
+                            className={`flex flex-col ${project.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} bg-white rounded-3xl shadow-[0_4px_24px_rgba(37,40,43,0.08)] overflow-hidden`}
                         >
 
                             <div className="w-full md:w-1/2 p-8 md:p-14 lg:p-20 flex flex-col justify-center items-start">
-                                <h3 className="text-3xl font-serif font-bold text-dark mb-4">
+                                <h3 className="text-3xl font-title font-bold text-[#25282B] mb-4">
                                     {project.title}
                                 </h3>
-                                <p className="text-muted text-base md:text-lg mb-8 leading-relaxed">
+                                <p className="text-[#828282] text-base md:text-lg mb-8 leading-relaxed">
                                     {project.description}
                                 </p>
-                                <button className="border-2 border-dark text-dark font-bold px-6 py-2 rounded-full hover:bg-dark hover:text-white transition-colors">
+                                <button className="border-2 border-[#25282B] text-[#25282B] font-bold px-6 py-2 rounded-lg hover:bg-[#25282B] hover:text-white transition-colors">
                                     View Project
                                 </button>
                             </div>

@@ -14,9 +14,9 @@ export default {
                 white: '#FFFFFF',
             },
             fontFamily: {
-                serif: ['"Playfair Display"', 'serif'],
+                serif: ['Nunito', 'serif'],
                 sans: ['Nunito', 'sans-serif'],
-                title: ['Montserrat', 'sans-serif'],
+                title: ['Playfair Display', 'sans-serif'],
             },
             maxWidth: {
                 container: '1140px',
