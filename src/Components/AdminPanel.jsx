@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 export default function AdminPanel({ portfolioData, updateData }) {
-    // États locaux pour gérer les formulaires de texte
     const [heroSubtitle, setHeroSubtitle] = useState(portfolioData.hero.subtitle);
     const [heroTitle, setHeroTitle] = useState(portfolioData.hero.title);
     const [heroDesc, setHeroDesc] = useState(portfolioData.hero.description);
@@ -27,7 +26,7 @@ export default function AdminPanel({ portfolioData, updateData }) {
     const handleAddProject = (e) => {
         e.preventDefault();
         const newProject = {
-            id: Date.now(), // Génère un ID unique
+            id: Date.now(),
             title: newProjTitle,
             description: newProjDesc,
             img: newProjImg || "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c",
@@ -103,7 +102,7 @@ export default function AdminPanel({ portfolioData, updateData }) {
                             <textarea rows="3" required value={newProjDesc} onChange={(e) => setNewProjDesc(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2.5 bg-white text-sm text-[#25282B]" />
                         </div>
                         <div>
-                            <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Lien URL de l'image (ou nom de l'asset)</label>
+                            <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Lien URL de l'image</label>
                             <input type="text" placeholder="https://..." value={newProjImg} onChange={(e) => setNewProjImg(e.target.value)} className="w-full border border-gray-300 rounded-lg p-2.5 bg-white text-sm text-[#25282B]" />
                         </div>
                         <div className="flex items-center space-x-3 pt-2">

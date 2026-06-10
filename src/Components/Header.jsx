@@ -9,18 +9,24 @@ export default function Header({ isLoggedIn, handleLogout }) {
         }, 100);
     };
     return (
-        <header className="w-full py-6 px-4 md:px-12 flex items-center justify-end absolute top-0 z-50">
+        <header className="w-full py-6 px-4 md:px-12 flex items-center justify-between absolute top-0 z-50">
+            <Link
+                to="/"
+                className="flex space-x-8 font-medium font-black text-lg text-[#25282B] tracking-wide hover:text-[#fefa36] transition-colors"
+            >
+                Julien Vouilloz
+            </Link>
             <nav>
                 <ul className="flex space-x-8 text-lg font-medium">
 
                     <li>
-                        <Link to="/about" className="hover:text-[#fefa36] transition-colors">About</Link>
+                        <Link to="/about" className="hover:text-white transition-colors">About</Link>
                     </li>
                     <li>
-                        <a href="/#projects" className="hover:text-[#fefa36] transition-colors">Projects</a>
+                        <a href="/#projects" className="hover:text-white transition-colors">Projects</a>
                     </li>
                     <li>
-                        <a href="/#contacts" className="hover:text-[#fefa36] transition-colors">Contacts</a>
+                        <a href="/#contacts" className="hover:text-white transition-colors">Contacts</a>
                     </li>
 
                     <li>

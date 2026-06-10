@@ -12,10 +12,9 @@ import About from './Components/About';
 import Login from './Components/Login';
 import AdminPanel from './Components/AdminPanel';
 
-// Données initiales par défaut (si le stockage local est vide)
 const initialData = {
     hero: {
-        subtitle: "Chef de projet",
+        subtitle: "Data and AI Project Manager",
         title: "Hello, my name is Julien Vouilloz",
         description: "Seven minutes, seven minutes is all i can spend to spare with you."
     },
@@ -48,13 +47,11 @@ const initialData = {
 };
 
 function App() {
-    // 1. Gestion de l'état des données du site
     const [portfolioData, setPortfolioData] = useState(() => {
         const savedData = localStorage.getItem('portfolioData');
         return savedData ? JSON.parse(savedData) : initialData;
     });
 
-    // 2. Gestion de la session administrateur
     const [isLoggedIn, setIsLoggedIn] = useState(() => {
         return localStorage.getItem('isAdmin') === 'true';
     });
@@ -72,17 +69,14 @@ function App() {
     return (
         <Router>
             <div className="min-h-screen flex flex-col bg-white text-[#25282B] font-sans overflow-x-hidden">
-                {/* On transmet l'état de connexion au Header pour changer le bouton */}
                 <Header isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
 
                 <main className="flex-grow">
                     <Routes>
-                        {/* On passe les données dynamiques à Home (qui les donnera à Hero, Projects) */}
                         <Route path="/" element={<Home portfolioData={portfolioData} />} />
                         <Route path="/about" element={<About portfolioData={portfolioData} />} />
                         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
 
-                        {/* Route sécurisée : Si non connecté, redirection vers /login */}
                         <Route
                             path="/admin"
                             element={isLoggedIn ? <AdminPanel portfolioData={portfolioData} updateData={updateData} /> : <Navigate to="/login" />}
